@@ -145,8 +145,8 @@ class HiveEntity(Entity):
         self._attr_unique_id = f'{self.device["hiveID"]}-{self.device["hiveType"]}'
         self._attr_device_info = DeviceInfo(
             identifiers={(DOMAIN, self.device["device_id"])},
-            model=self.device["deviceData"]["model"],
-            manufacturer=self.device["deviceData"]["manufacturer"],
+            # model=self.device["deviceData"]["model"],
+            # manufacturer=self.device["deviceData"]["manufacturer"],
             name=self.device["device_name"],
             sw_version=self.device["deviceData"]["version"],
             via_device=(DOMAIN, self.device["parentDevice"]),
